@@ -33,7 +33,7 @@ Output Format
 
 For each query, output a message in the following format:
 
-A query from position X Y at timestamp Z has found an event on position A B Timestep: T Event ID: E
+"A query from position X Y at timestamp Z has found an event on position A B Timestep: T Event ID: E"
 
 - (X, Y, Z): The position and timestamp of the query.
 - (A, B, T, E): The position, timestep, and unique event ID of the nearest event found.
