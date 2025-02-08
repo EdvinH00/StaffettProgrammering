@@ -40,6 +40,7 @@ If no path to an event is found within 45 time steps, output:
   - "A query from position X Y at timestamp Z has expired without finding an event."
 
 (X, Y, Z): The position and timestamp of the query.
+
 (A, B, T, E): The position, timestep, and unique event ID of the nearest event found.
 
 
