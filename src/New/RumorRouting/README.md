@@ -1,7 +1,7 @@
 # Rumor Routing
 
 - The simulation runs for 10,000 time steps.
-- At every time step, each node has a 0.01% chance of detecting an event.
+- At every time step, each node has a 0.01% chance of generating an event.
 - When an event occurs at a node, there is a 50% chance that an agent will be generated at that node to propagate the event information.
 - Every 400 time steps, 4 queries are created at random nodes.
 - If a query does not find an event within 45 time steps, it expires.
