@@ -33,18 +33,13 @@ Output Format
 
 For each query, output a message in the following format:
 
-"A query from position X Y at timestamp Z has found an event on position A B Timestep: T Event ID: E"
+   "A query from position X Y at timestamp Z has found an event on position A B Timestep: T Event ID: E"
+Or:
+
+   "A query from position X Y at timestamp Z has expired without finding an event."
 
 - (X, Y, Z): The position and timestamp of the query.
 - (A, B, T, E): The position, timestep, and unique event ID of the nearest event found.
 - If no path to an event is found within 45 time steps, output:
 
-A query from position X Y at timestamp Z has expired without finding an event.
 
-Constraints
-    N = 2500 (Fixed grid of 50x50 nodes)
-    0 ≤ M ≤ 4N (Each node can have up to 4 neighbors)
-    1 ≤ E ≤ 100 (Limited event occurrences)
-    1 ≤ Q ≤ 100 (Limited queries)
-    1 ≤ s, q ≤ 2500
-    1 ≤ t ≤ 10^6 (Events and queries occur at distinct timestamps)
