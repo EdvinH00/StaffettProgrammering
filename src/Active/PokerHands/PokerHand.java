@@ -5,20 +5,24 @@ import java.util.List;
 
 public class PokerHand {
 
-    private List<Card> cards;
+    private final List<Card> cards;
 
     public PokerHand(List<Card> cards) {
         this.cards = cards;
     }
 
     public int getHighestCard() {
-        List<Integer> values = cards.stream().map(card -> card.value).toList();
-        return values.stream().max(Integer::compareTo).get();
+        return cards.stream()
+                .map(Card::value)
+                .max(Integer::compareTo)
+                .get();
     }
 
     public boolean getPair() {
         // 4 4 5 6 2
-        List<Integer> values = new ArrayList<>(cards.stream().map(card -> card.value).toList());
+        List<Integer> values = new ArrayList<>(cards.stream()
+                .map(card -> card.value())
+                .toList());
         values.sort(Integer::compareTo);
         // 2 4 4 6 6
 
@@ -53,5 +57,10 @@ public class PokerHand {
 
     public boolean isThreeOfAKind() {
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return cards.toString();
     }
 }

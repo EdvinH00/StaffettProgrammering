@@ -1,12 +1,18 @@
 package Active.PokerHands;
 
-public class Card {
+import java.util.ArrayList;
+import java.util.List;
 
-    public String suit;
-    public int value;
+public record Card(Suit suit,
+                   int value) {
+    static List<Character> valueList = List.of(
+            '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'
+    );
+    public Card {
 
-    public Card(String suit, int value) {
-        this.suit = suit;
-        this.value = value;
+    }
+
+    public Card (Suit suit, Character character){
+        this(suit, valueList.indexOf(character)+1);
     }
 }
