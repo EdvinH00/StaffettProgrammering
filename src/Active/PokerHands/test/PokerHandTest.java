@@ -26,7 +26,7 @@ class PokerHandTest {
     @Test
     void getHighestCardWithSuitedValue() {
         List<Card> cards = List.of(
-                new Card(Suit.HEARTS, 'K'),
+                new Card(Suit.HEARTS, "K"),
                 new Card(Suit.SPADES, 4),
                 new Card(Suit.DIAMONDS, 3),
                 new Card(Suit.HEARTS, 2),
